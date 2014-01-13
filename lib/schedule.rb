@@ -74,19 +74,4 @@ class Schedule
     end
   end
 
-  def run_schedule_demo
-    create_track("Track 1")
-    create_track("Track 2")
-    import_talks
-    schedule_tracks
-    @tracks.each do | track|
-      puts track.track_name
-      track.sort_talks
-      track.talks.each do |talk|
-        puts talk
-      end
-      puts "\n\n"
-    end
-  end
-
 end
