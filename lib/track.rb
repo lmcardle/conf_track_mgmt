@@ -18,7 +18,7 @@ class Track
     @talks.push(Talk.new("Networking Event", nil, 500, 1700))
   end
 
-  def time_of_day_key(time_of_day)
+  def total_session_time(time_of_day)
     time_of_day == :morning ? self.morning_time : self.afternoon_time
   end
 
@@ -27,7 +27,7 @@ class Track
   end
 
   def available_time?(talk, time_of_day)
-    self.time_of_day_key(time_of_day) < max_min(time_of_day) && self.time_of_day_key(time_of_day) + talk.minutes <= max_min(time_of_day)
+    self.total_session_time(time_of_day) < max_min(time_of_day) && self.total_session_time(time_of_day) + talk.minutes <= max_min(time_of_day)
   end
 
   def add_talk(talk, time_of_day)
