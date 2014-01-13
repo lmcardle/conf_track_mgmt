@@ -12,7 +12,7 @@ def run_schedule_demo(schedule)
 end
 
 def prints_track_schedule(track)
-  puts track.track_name
+  puts track.track_name + ":"
   track.sort_talks
   track.talks.each do |talk|
     puts talk

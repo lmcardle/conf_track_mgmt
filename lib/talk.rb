@@ -15,11 +15,16 @@ class Talk
   def formatted_start_time
     if @start_time
       hr = start_time / 100
+      hr = hr.to_s.length == 2 ? hr : "0" + hr.to_s
       min = start_time % 100
       min = min.to_s.length == 1 ? "00" : min.to_s
-      time_period = hr > 8 ? "AM" : "PM"
+      if @military_time_start && @military_time_start < 1200
+        time_period = "AM"
+      else
+        time_period = "PM"
+      end
 
-      "#{hr}:#{min} #{time_period}"
+      "#{hr}:#{min}#{time_period}"
     else
       "No Start Time has been assigned"
     end
