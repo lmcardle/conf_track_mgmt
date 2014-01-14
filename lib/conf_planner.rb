@@ -17,7 +17,7 @@ def prints_track_schedule(track)
   track.talks.each do |talk|
     puts talk
   end
-  puts "\n\n"
+  puts "\n"
 end
 
 
