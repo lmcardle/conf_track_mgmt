@@ -17,6 +17,6 @@ You are planning a big programming conference and have received many proposals w
 Approach
 This solution is written in Ruby.  The source files are located under the lib directory.  
 
-To run the program, at a terminal prompt, run the /lib/conf_planner.rb file.  On a Mac, inside the lib folder, you would type: ruby conf_planner.rb.
+To run the program, at a terminal prompt, run the /lib/conf_planner.rb file.  On a Mac, at the root of the project folder, you would type: ruby lib/conf_planner.rb.
 
-The data input file is located at the root and named test_input
+The data input file is located at the root and named "test_input"
